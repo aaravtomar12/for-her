@@ -3,32 +3,27 @@
 <head>
   <title>💖</title>
 
+  <!-- Cute Font -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
 
   <style>
     body {
       text-align: center;
       font-family: 'Pacifico', cursive;
-      margin-top: 50px;
-      background: linear-gradient(to right, #ffdde1, #ee9ca7);
+      margin-top: 100px;
+      background: linear-gradient(to right, #ff9a9e, #fecfef);
       overflow: hidden;
     }
 
-    img {
-      width: 220px;
-      margin-bottom: 20px;
-    }
-
     h1 {
-      font-size: 45px;
-      color: #ff4d6d;
+      font-size: 40px;
     }
 
     button {
       padding: 12px 25px;
-      font-size: 20px;
+      font-size: 18px;
       position: absolute;
-      border-radius: 20px;
+      border-radius: 10px;
       border: none;
       cursor: pointer;
       font-family: 'Pacifico', cursive;
@@ -36,23 +31,20 @@
 
     #yes {
       left: 40%;
-      top: 65%;
-      background: #ff4d6d;
+      top: 55%;
+      background: red;
       color: white;
     }
 
     #no {
       left: 55%;
-      top: 65%;
+      top: 55%;
       background: white;
     }
   </style>
 </head>
 
 <body>
-
-<!-- Cute Image -->
-<img src="https://cdn.pixabay.com/photo/2021/01/31/17/53/rabbit-5966118_1280.png">
 
 <h1>Do you love me, Vanshika? 💖🥺</h1>
 
@@ -70,7 +62,7 @@ function moveNo() {
 
 function yesClicked() {
   document.body.innerHTML = `
-    <h1 style="color:#ff4d6d;">YAYYYYY 💖🥰</h1>
+    <h1>YAYYYYY 💖🥰</h1>
     <h2>I knew you loved me 😏💕</h2>
   `;
 }
