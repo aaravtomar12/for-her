@@ -3,6 +3,7 @@
 <head>
   <title>For You 💖</title>
 
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300&display=swap" rel="stylesheet">
 
   <style>
@@ -16,24 +17,32 @@
 
     h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 50px;
+      font-size: 55px;
       color: #ff4d6d;
       margin-top: 120px;
+    }
+
+    #type {
+      border-right: 2px solid #ff4d6d;
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
     }
 
     button {
       padding: 12px 25px;
       font-size: 18px;
-      border-radius: 20px;
+      border-radius: 25px;
       border: none;
       cursor: pointer;
       background: #ff4d6d;
       color: white;
       margin-top: 30px;
       position: absolute;
+      font-family: 'Poppins', sans-serif;
     }
 
-    #nextBtn {
+    #centerBtn {
       position: static;
     }
 
@@ -64,17 +73,29 @@
 
 <body>
 
-<h1>Zalak… I have something to tell you 💭</h1>
-
-<button id="nextBtn" onclick="next()">Tap here 🥺</button>
+<h1 id="type"></h1>
+<button id="centerBtn" onclick="next()">Tap here 🥺</button>
 
 <script>
+let text = "Zalak… I have something to tell you 💭";
+let i = 0;
+
+function typeEffect() {
+  if (i < text.length) {
+    document.getElementById("type").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeEffect, 60);
+  }
+}
+
+typeEffect();
+
 function next() {
   document.body.innerHTML = `
     <h1 style="font-family:'Great Vibes'; color:#ff4d6d; margin-top:120px;">
       I didn’t plan this…
     </h1>
-    <button id="nextBtn" onclick="next2()">Next 👉</button>
+    <button id="centerBtn" onclick="next2()">Next 👉</button>
   `;
 }
 
@@ -83,7 +104,7 @@ function next2() {
     <h1 style="font-family:'Great Vibes'; color:#ff4d6d; margin-top:120px;">
       but you’ve become really special to me 💖
     </h1>
-    <button id="nextBtn" onclick="next3()">Next 👉</button>
+    <button id="centerBtn" onclick="next3()">Next 👉</button>
   `;
 }
 
@@ -92,7 +113,7 @@ function next3() {
     <h1 style="font-family:'Great Vibes'; color:#ff4d6d; margin-top:120px;">
       and I think…
     </h1>
-    <button id="nextBtn" onclick="finalStep()">Tap 🥺</button>
+    <button id="centerBtn" onclick="finalStep()">Tap 🥺</button>
   `;
 }
 
